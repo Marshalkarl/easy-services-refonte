@@ -1,10 +1,10 @@
-:root{--o:#ee7d11;--n:#0a1f5c;--k:#1a1a1a;--g:#f4f4f4;--b:#f3f6fc}
+:root{--o:#ee7d11;--n:#0a1f5c;--k:#1a1a1a;--g:#f4f4f4;--b:#f3f6fc;--max:1400px;--pad:40px;--r:max(var(--pad),calc((100vw - var(--max))/2 + var(--pad)))}
 *{box-sizing:border-box;margin:0}
 body{font:400 16px/1.6 Inter,"Segoe UI",Arial,sans-serif;color:var(--k);background:#fff}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
-.w{max-width:1140px;margin:0 auto;padding:0 28px}
+.w{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
 header{border-bottom:1px solid var(--o);background:#fff;position:sticky;top:0;z-index:20}
-header .w{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:none;padding:0 32px}
+header .w{display:flex;align-items:center;justify-content:space-between;height:64px}
 header img{height:38px}
 nav{display:flex;align-items:center;height:100%}
 nav a{display:flex;align-items:center;height:100%;padding:0 20px;font-weight:600;font-size:15px;color:var(--n);border-bottom:3px solid transparent}
@@ -55,14 +55,14 @@ form textarea{height:140px;resize:vertical}form button{width:100%;margin-top:22p
 .fil li{display:flex;gap:12px;margin-bottom:10px;line-height:1.5}
 .fil svg{width:20px;height:20px;flex:none;stroke:var(--o);fill:none;stroke-width:1.8;margin-top:2px}
 footer{background:var(--o);color:#fff}
-footer .w{display:grid;grid-template-columns:1.1fr 1.1fr 1.5fr;gap:40px;padding-top:44px;padding-bottom:36px;max-width:1180px}
+footer .w{display:grid;grid-template-columns:1.1fr 1.1fr 1.5fr;gap:40px;padding-top:44px;padding-bottom:36px}
 footer h4{font-size:18px;font-weight:600;margin-bottom:16px}footer p,footer li{font-size:15px;margin-bottom:12px;list-style:none}
 footer ul{padding:0}footer img{height:36px;margin-bottom:22px}
-.fb{border-top:1px solid rgba(255,255,255,.7);max-width:1180px;margin:20px auto 0;padding:26px 28px 40px;font-size:15px;color:#fff}
-#cb{position:fixed;right:28px;bottom:28px;width:56px;height:56px;border-radius:50%;border:0;background:#141414;color:#fff;cursor:pointer;z-index:30}
+.fb{border-top:1px solid rgba(255,255,255,.7);max-width:var(--max);margin:20px auto 0;padding:26px var(--pad) 40px;font-size:15px;color:#fff}
+#cb{position:fixed;right:var(--r);bottom:28px;width:56px;height:56px;border-radius:50%;border:0;background:#141414;color:#fff;cursor:pointer;z-index:30}
 #cb svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8}
 #cb:after{content:"";position:absolute;right:-6px;top:-6px;width:12px;height:12px;border:2px solid #fff;border-radius:50%;background:transparent}
-#cp{position:fixed;right:28px;bottom:96px;width:360px;max-width:calc(100% - 32px);height:430px;background:#fff;border:2px solid var(--n);display:none;flex-direction:column;z-index:30;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+#cp{position:fixed;right:var(--r);bottom:96px;width:360px;max-width:calc(100% - 32px);height:430px;background:#fff;border:2px solid var(--n);display:none;flex-direction:column;z-index:30;box-shadow:0 6px 24px rgba(0,0,0,.25)}
 #cp.on{display:flex}
 #cp .h{background:#001548;color:#fff;font-weight:600;padding:18px 24px;display:flex;justify-content:space-between}
 #cp .h button{background:none;border:0;color:#fff;font-size:20px;cursor:pointer}
