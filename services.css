@@ -1,0 +1,35 @@
+/* À coller à la fin de votre CSS existant (ou à lier avec <link rel="stylesheet" href="services.css">) */
+:root{--es-orange:#e07b39;--es-navy:#1f2060;--es-bg:#f8f5f1;--es-text:#2b2b3a}
+
+/* ---------- Cartes cliquables ---------- */
+.cards .card{display:flex;flex-direction:column;text-decoration:none;color:inherit;cursor:pointer;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.cards .card:hover,.cards .card:focus-visible{transform:translateY(-3px);box-shadow:0 8px 22px rgba(31,32,96,.12);border-color:var(--es-orange)}
+.cards .card:focus-visible{outline:2px solid var(--es-navy);outline-offset:3px}
+.cards .card h3{display:flex;align-items:center;gap:12px}
+.cards .card h3 i{display:inline-flex;flex:none;width:42px;height:42px;align-items:center;justify-content:center;
+  border-radius:10px;background:rgba(224,123,57,.12);color:var(--es-orange)}
+.cards .card h3 i svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cards .card .l{margin-top:auto;padding-top:12px;color:var(--es-orange);font-weight:600}
+@media (prefers-reduced-motion:reduce){.cards .card{transition:none}.cards .card:hover{transform:none}}
+
+/* ---------- Pages de détail ---------- */
+.service-page{margin:0;background:var(--es-bg);color:var(--es-text);font-family:inherit;line-height:1.65}
+.service{max-width:760px;margin:0 auto;padding:32px 20px 64px}
+.service .back{display:inline-block;margin-bottom:28px;color:var(--es-navy);text-decoration:none;font-weight:500}
+.service .back:hover{text-decoration:underline}
+.service .ico{display:inline-flex;width:56px;height:56px;align-items:center;justify-content:center;border-radius:14px;
+  background:rgba(224,123,57,.12);color:var(--es-orange)}
+.service .ico svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.service h1{margin:16px 0 8px;font-size:clamp(28px,5vw,40px);line-height:1.15;color:#000}
+.service .lead{font-size:1.15rem;color:var(--es-navy)}
+.service p{max-width:68ch}
+.service .points{margin:24px 0;padding:0;list-style:none;display:grid;gap:10px}
+.service .points li{padding:12px 16px 12px 44px;position:relative;background:#fff;border:1px solid #e6e1da;border-radius:10px}
+.service .points li::before{content:"";position:absolute;left:16px;top:50%;width:14px;height:8px;margin-top:-6px;
+  border-left:2px solid var(--es-orange);border-bottom:2px solid var(--es-orange);transform:rotate(-45deg)}
+.service .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.service .btn{display:inline-block;padding:13px 22px;border-radius:10px;background:var(--es-orange);color:#fff;text-decoration:none;font-weight:600}
+.service .btn.ghost{background:#fff;color:var(--es-navy);border:1px solid #ddd}
+.service .btn:hover{filter:brightness(.95)}
+.service .btn:focus-visible,.service .back:focus-visible{outline:2px solid var(--es-navy);outline-offset:3px}

@@ -1,0 +1,101 @@
+/* ---- Page Références ---- */
+:root{--ref-orange:#f07c1e;--ref-navy:#1b2a6b;--ref-bg:#F4F4F5;--ref-line:#E4E4E7}
+
+/* ===== Bandeau pêche, cercles décoratifs ===== */
+section.ph.ref-hero{position:relative;overflow:hidden;background:#FFF3E8;padding:28px 0 64px !important;min-height:0 !important;height:auto !important}
+section.ph.ref-hero::before{content:"";position:absolute;right:-70px;top:-110px;width:320px;height:320px;border-radius:50%;background:#FFE7D1}
+section.ph.ref-hero::after{content:"";position:absolute;left:66%;bottom:-48px;width:130px;height:130px;border-radius:50%;background:#F7A94F}
+.ref-hero .w{position:relative;z-index:1;padding-top:0 !important;padding-bottom:0 !important;margin-top:0 !important;margin-bottom:0 !important}
+.ref-hero small{display:block;margin:0 0 10px !important;font-size:13px;color:#222 !important}
+.ref-hero small a{color:#222 !important}
+.ref-hero .eb{margin:0 0 4px !important;font-size:12px;color:var(--ref-orange) !important}
+.ref-hero h1{margin:0 0 8px !important;font-size:38px !important;line-height:1.15 !important;color:var(--ref-navy) !important}
+.ref-hero p{margin:0 !important;font-size:15px !important;line-height:1.5 !important;max-width:560px;color:#333 !important}
+
+/* Chiffres clés : cartes blanches à droite */
+.ref-kpi{position:absolute;right:0;top:50%;transform:translateY(-50%);display:flex;gap:12px;margin:0}
+.ref-kpi div{width:120px;padding:20px 10px 18px;background:#fff;border-radius:18px;box-shadow:0 6px 20px rgba(0,0,0,.06);text-align:center;font-size:12px;color:#777}
+.ref-kpi b{display:block;font-size:26px;font-weight:700;color:var(--ref-navy);line-height:1.1;margin-bottom:6px}
+
+/* ===== Section grise + barre de filtres flottante ===== */
+section.sec.ref-sec{background:var(--ref-bg);padding-top:0 !important;padding-bottom:48px !important}
+.ref-sec .w{display:flow-root}
+.ref-bar{position:relative;z-index:2;margin-top:-34px;background:#fff;border-radius:16px;box-shadow:0 6px 24px rgba(0,0,0,.08);padding:14px 22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px 16px}
+.ref-count{margin:0;font-size:14px;color:#444}
+.ref-sel{display:flex;align-items:center;gap:10px;font:500 14px Inter,sans-serif;color:#444;margin-left:auto}
+.ref-sel select{padding:7px 14px;border:1px solid var(--ref-line);border-radius:8px;font:500 14px Inter,sans-serif;background:#fff;min-width:190px}
+
+.ref-groups{flex-basis:100%;display:flex;flex-direction:column;gap:12px;padding-top:12px;border-top:1px solid var(--ref-bg)}
+.ref-groups[hidden]{display:none}
+.ref-group{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.ref-group[hidden]{display:none}
+.ref-group-label{font:700 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#888;min-width:72px}
+.ref-chips{display:flex;gap:8px;flex-wrap:wrap}
+.ref-chip{border:1px solid var(--ref-line);background:#fff;color:#222;font:600 13px Inter,sans-serif;padding:8px 16px;border-radius:999px;cursor:pointer;transition:all .2s}
+.ref-chip i{font-style:normal;font-size:12px;font-weight:700;opacity:.6;margin-left:8px}
+.ref-chip:hover:not(:disabled){border-color:var(--ref-orange);color:var(--ref-orange)}
+.ref-chip.on{background:var(--ref-orange);border-color:var(--ref-orange);color:#fff}
+.ref-chip.on i{opacity:.85}
+.ref-chip:disabled{opacity:.4;cursor:not-allowed}
+.ref-chip:focus-visible,.ref-sel select:focus-visible,.ref-reset:focus-visible,.ref-site:focus-visible{outline:2px solid var(--ref-orange);outline-offset:2px}
+
+/* ===== Cartes ===== */
+.ref-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-top:18px}
+.ref-card{background:#fff;border:1px solid var(--ref-line);border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04);transition:transform .25s,box-shadow .25s,border-color .25s;animation:refIn .45s both}
+.ref-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.12);border-color:var(--ref-orange)}
+.ref-logo{height:68px;display:flex;align-items:center;justify-content:center;background:#fff;border-bottom:1px solid var(--ref-bg);padding:8px 16px;color:var(--ref-navy);font-size:14px}
+.ref-logo img{max-width:80%;max-height:44px;object-fit:contain;transition:transform .3s}
+.ref-card:hover .ref-logo img{transform:scale(1.08)}
+.ref-body{padding:10px 14px 12px}
+.ref-body h3{font-size:15px;margin:0 0 2px;line-height:1.25}
+.ref-pays{font-size:12px;color:#666;margin:0 0 6px}
+.ref-tags{display:flex;gap:4px;flex-wrap:wrap}.ref-tags:empty{display:none}
+.ref-tags span{font-size:11px;font-weight:600;background:#fff3e8;color:#c85f0a;padding:3px 8px;border-radius:999px}
+.ref-tags span.srv{background:#eef2f7;color:#34506f}
+.ref-site{display:inline-block;margin-top:6px;font:600 12px Inter,sans-serif;color:var(--ref-orange);text-decoration:none}
+.ref-site:hover{text-decoration:underline}
+
+.ref-empty{text-align:center;padding:48px 0;color:#555}
+.ref-reset{margin-top:12px;background:var(--ref-orange);color:#fff;border:0;padding:12px 24px;border-radius:6px;font:600 15px Inter,sans-serif;cursor:pointer}
+
+@keyframes refIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.ref-card{animation:none}.ref-card,.ref-logo img{transition:none}}
+
+/* Écrans moyens : les cartes de chiffres passent sous le texte */
+@media(max-width:1100px){
+  .ref-kpi{position:static;transform:none;margin-top:16px}
+  .ref-kpi div{width:auto;min-width:110px;padding:14px 18px}
+  section.ph.ref-hero::after{left:78%}
+}
+@media(max-width:700px){
+  section.ph.ref-hero{padding:20px 0 52px !important}
+  .ref-hero h1{font-size:30px !important}
+  .ref-bar{padding:12px 16px}
+  .ref-sel{margin-left:0;width:100%;justify-content:space-between}
+  .ref-group{align-items:flex-start;flex-direction:column;gap:8px}
+}
+
+/*  pop-up + cartes cliquables  */
+.ref-card{cursor:pointer}
+.ref-card:focus-visible{outline:2px solid var(--ref-orange);outline-offset:2px}
+.ref-logo b{font-weight:700;text-align:center;line-height:1.2}
+.ref-dom{font-size:12px;font-weight:600;color:var(--ref-navy);margin:0 0 2px}
+.ref-tags span.more{background:#eef2f7;color:#34506f}
+
+body.ref-lock{overflow:hidden}
+.ref-modal{position:fixed;inset:0;margin:auto;height:fit-content;overflow:auto;border:0;border-radius:20px;padding:32px 28px 28px;width:min(460px,calc(100% - 32px));max-height:calc(100% - 48px);background:#fff;color:#222;box-shadow:0 24px 60px rgba(0,0,0,.25);font-family:Inter,Montserrat,sans-serif;animation:refPop .25s both}
+.ref-modal::backdrop{background:rgba(27,42,107,.55);backdrop-filter:blur(2px)}
+.ref-modal-x{position:absolute;top:12px;right:14px;width:36px;height:36px;border:0;border-radius:50%;background:var(--ref-bg);color:var(--ref-navy);font-size:22px;line-height:1;cursor:pointer;transition:background .2s,color .2s}
+.ref-modal-x:hover{background:var(--ref-orange);color:#fff}
+.ref-modal-x:focus-visible{outline:2px solid var(--ref-orange);outline-offset:2px}
+.ref-modal-logo{height:84px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--ref-line);border-radius:14px;padding:10px 20px;margin-bottom:18px;color:var(--ref-navy);font-size:18px;text-align:center}
+.ref-modal-logo img{max-width:80%;max-height:56px;object-fit:contain}
+.ref-modal h2{margin:0 0 16px;font-size:24px;line-height:1.2;color:var(--ref-navy)}
+.ref-modal-info{margin:0;display:flex;flex-direction:column;gap:12px}
+.ref-modal-info dt{font:700 11px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#888;margin-bottom:4px}
+.ref-modal-info dd{margin:0;font-size:15px;color:#333}
+.ref-modal-info .ref-tags{gap:6px}
+.ref-modal-info .ref-tags span{font-size:12px;padding:5px 12px}
+.ref-modal .ref-site{margin-top:18px;font-size:14px}
+@keyframes refPop{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.ref-modal{animation:none}}
